@@ -5,9 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header{ position: sticky; top: 0px;background-color: #FF6633; color: white; font-size: 16px; font-weight: 600; height: 60px; width: 100%; display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; }
+.header-item {
+  width: 100px;
+}
+.header :hover { font-size: 20px;}

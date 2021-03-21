@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+// import { withRouter } from 'react-router';
+import store from './store';
+import Header from './components/Header';
+// import routes from './routes';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
+const Home = lazy(() => import('./containers/Home/Home'));
+const Upload = lazy(() => import('./containers/Upload/Upload'));
+const Results = lazy(() => import('./containers/Results/Results'));
+
+const rootElement = document.getElementById('root')
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Provider store={store}>
+    <BrowserRouter>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Header />
+        <Switch>
+          <Route path="/upload" component={Upload} />
+          <Route path="/results" component={Results} />
+          <Route path="/" component={Home} />
+        </Switch>
+      </Suspense>
+    </BrowserRouter>
+  </Provider>,
+  rootElement
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+// routes, lazy loading
+// redux -> function routes
+// redux-thunk for async calls
+// responsive site
