@@ -1,0 +1,26 @@
+.home-container{
+  width: 100%;
+  border: 1px solid orange;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;align-items: center;
+}
+
+.content-title{float: left;font-size: 18px;font-weight: 600; text-decoration: underline; top: 3em; position: absolute;}
+.content-div{ padding: 1em; max-width: 80%; min-width: 240px; position: absolute; top: 3em; border: 1px solid black; display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;}
+.input-divs{ flex: 0 25%; height: 48px; margin-bottom: 2%}
+input { margin: 10px;}
+
+.apibox{bottom: -120px; left: 0;position: absolute; max-width: 80%; min-width: 95%;display:flex; justify-content: left; border: 1px solid black; height: 70px; vertical-align: middle; padding: 1em; text-align: left;}
+.text-content{position: absolute; top: 15%;width: 70%;word-break:break-word;font-size: 12px;}
+.get-btn{outline: 0;color: white; background-color: blueviolet; font-size: 14px; padding: 10px; width: 80px; height: 50px; border: 1px solid transparent; border-radius: 50px; position: absolute; right: 10px;}
+.get-btn :hover {font-size: 20px; }
+
+.response-box{bottom: -290px; left: 0; position: absolute; max-width: 80%; min-width: 95%; height: 100%; padding: 1em; box-sizing: border-box; text-align: left;}
+.response-item{padding: 10px;}
+.clickme{font-size: 20px; font-weight: 700; text-decoration: underline; padding: 10px; text-align: center}
+.res-title{font-size: 18px; font-weight: 700;}
+.res-description{width: 50px;font-size: 16px; float: right;}

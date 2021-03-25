@@ -1,0 +1,11 @@
+.result-container{
+  width: 100%;
+  border: 1px solid orange;
+  display: flex;
+  position: relative;
+  justify-content: center;align-items: center;flex-wrap: wrap;
+}
+.copy-clip-wrapper{position: absolute; bottom: -75px; display: flex; flex-wrap: wrap;justify-content: center;}
+.textarea-wrapper{height: 50px}
+.textarea-wrapper textarea {    border: 0; border-radius: 0; border-bottom: 1px solid grey; width: 300px; outline: none; margin-top: 12px; resize: none; padding: 0 25px 0 0; box-sizing: border-box; font-size: 14px; height: 32px;}
+.clip-btn{outline: 0; color: white; background-color: mediumblue; font-size: 14px; padding: 10px; height: 40px; border: 1px solid transparent; border-radius: 10px; margin-top: 7px; margin-left: 10px;}
